@@ -1,6 +1,9 @@
 package utils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class RandomUtils {
     private static final Random RANDOM = new Random();
@@ -9,7 +12,12 @@ public class RandomUtils {
     private RandomUtils() {
     }
 
-    public static int createNumber() {
+    private static int createNumber() {
         return RANDOM.nextInt(MAX_NUMBER);
+    }
+
+    public static List<Integer> createRaceNumbers(int countOfCars) {
+        List<Integer> raceNumbers = new ArrayList<>(countOfCars);
+        return raceNumbers.stream().map(number -> RandomUtils.createNumber()).collect(Collectors.toList());
     }
 }

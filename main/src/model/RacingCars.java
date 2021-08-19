@@ -30,4 +30,8 @@ public class RacingCars {
             throw new IllegalArgumentException("[Error] 입력한 자동차가 한대입니다.");
         }
     }
+
+    public List<Car> getRacingCars() {
+        return racingCars;
+    }
 }
