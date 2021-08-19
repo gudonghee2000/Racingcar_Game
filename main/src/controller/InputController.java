@@ -12,4 +12,8 @@ public class InputController {
         String[] Cars = scanner.nextLine().split(",");
         return Cars;
     }
+
+    public static int inputNumber() {
+        return scanner.nextInt();
+    }
 }
