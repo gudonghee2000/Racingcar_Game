@@ -23,3 +23,16 @@
 
 - 단독 우승일 경우 자동차 이름을 출력
 - 공동 우승일 경우 콤마(,)와 공백 으로 자동차 이름을 구분하여 출력
+## 프로젝트 구조
+
+### Model
+#### Car 클래스
+#### CarRacingGame 클래스
+#### NumberOfRacing 클래스
+### Controller
+#### Application 클래스
+#### GameController 클래스
+#### InputController 클래스
+### View
+#### GameView 클래스
+### Utils
