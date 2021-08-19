@@ -8,7 +8,7 @@ public class RacingCarGame {
         racingCars = new RacingCars(cars);
     }
 
-    public void inputNumber(int number) {
+    public void inputNumberOfGames(int number) {
         numberOfRaces = new NumberOfRaces(number);
     }
 }

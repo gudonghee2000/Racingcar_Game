@@ -11,7 +11,7 @@ public class GameController {
     public static void runGame() {
         GameView.startGame();
         RacingCarGame racingCarGame = new RacingCarGame(InputController.inputCars());
-        GameView.playGameCount();
-        racingCarGame.inputNumber(InputController.inputNumber());
+        GameView.playGameNumber();
+        racingCarGame.inputNumberOfGames(InputController.inputNumber());
     }
 }
