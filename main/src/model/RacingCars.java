@@ -4,10 +4,10 @@ import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class RacingCarGame {
+public class RacingCars {
     private List<Car> racingCars = new ArrayList<>();
 
-    public RacingCarGame(String[] Cars) {
+    public RacingCars(String[] Cars) {
         inputRacingCars(Cars);
     }
 
