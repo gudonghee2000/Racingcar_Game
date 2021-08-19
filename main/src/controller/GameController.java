@@ -9,9 +9,10 @@ public class GameController {
     }
 
     public static void runGame() {
+        int gameOver = 0;
         GameView.startGame();
         RacingCarGame racingCarGame = new RacingCarGame(InputController.inputCars());
-        GameView.playGameNumber();
-        racingCarGame.inputNumberOfGames(InputController.inputNumber());
+        GameView.playGameCount();
+        racingCarGame.inputCountOfRaces(InputController.inputRaceCount());
     }
 }

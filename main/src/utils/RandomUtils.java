@@ -9,7 +9,7 @@ public class RandomUtils {
     private RandomUtils() {
     }
 
-    public static int createRaceNumber() {
+    public static int createNumber() {
         return RANDOM.nextInt(MAX_NUMBER);
     }
 }

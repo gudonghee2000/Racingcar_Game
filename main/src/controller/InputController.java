@@ -13,7 +13,7 @@ public class InputController {
         return Cars;
     }
 
-    public static int inputNumber() {
+    public static int inputRaceCount() {
         return scanner.nextInt();
     }
 }

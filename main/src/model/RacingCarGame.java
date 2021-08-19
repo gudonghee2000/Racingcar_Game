@@ -2,13 +2,13 @@ package model;
 
 public class RacingCarGame {
     private RacingCars racingCars;
-    private NumberOfRaces numberOfRaces;
+    private CountOfRaces countOfRaces;
 
     public RacingCarGame(String[] cars) {
         racingCars = new RacingCars(cars);
     }
 
-    public void inputNumberOfGames(int number) {
-        numberOfRaces = new NumberOfRaces(number);
+    public void inputCountOfRaces(int number) {
+        countOfRaces = new CountOfRaces(number);
     }
 }
