@@ -1,29 +1,31 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.OptionalInt;
-import java.util.stream.IntStream;
 
 public class Winner {
-    private List<String> Winners = new ArrayList<>();
+    private List<String> winners = new ArrayList<>();
 
     protected Winner(String[] racingCarsName, int[] racingCarsPosition) {
-        int m = 0;
-        for (int index = 0; index < racingCarsPosition.length; index++) {
-            if (racingCarsPosition[index] > m) {
-                m = racingCarsPosition[index];
-            }
-        }
+        int m = maxCarPosition(racingCarsPosition);
         for (int index = 0; index < racingCarsPosition.length; index++) {
             if (racingCarsPosition[index] == m) {
-                Winners.add(racingCarsName[index]);
+                winners.add(racingCarsName[index]);
             }
         }
     }
 
+    private int maxCarPosition(int[] racingCarsPosition) {
+        int maxPosition = 0;
+        for (int index = 0; index < racingCarsPosition.length; index++) {
+            if (racingCarsPosition[index] > maxPosition) {
+                maxPosition = racingCarsPosition[index];
+            }
+        }
+        return maxPosition;
+    }
+
     public List<String> getWinners() {
-        return Winners;
+        return winners;
     }
 }
