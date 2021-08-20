@@ -22,7 +22,16 @@ public class RacingCarGame {
         return racingCars.getRacingCars().size();
     }
 
-    public void inputRaceNumber(List<Integer> raceNumbers) {
+    public int getRaceCount() {
+        return countOfRaces.getRaceCount();
+    }
+
+    public void moveRacingCar(List<Integer> raceNumbers) {
         this.raceNumbers = raceNumbers.stream().map(RaceNumber::new).collect(Collectors.toList());
+        racingCars.moveRacingCars(this.raceNumbers);
+    }
+
+    public int[] getRacingCarsPosition() {
+        return racingCars.getCarsPosition();
     }
 }

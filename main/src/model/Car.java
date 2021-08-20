@@ -8,4 +8,12 @@ public class Car {
         this.name = name;
     }
 
+    public void moveRacingCar(int raceNumber) {
+        if (raceNumber > 4)
+            position += 1;
+    }
+
+    public int getPosition() {
+        return position;
+    }
 }

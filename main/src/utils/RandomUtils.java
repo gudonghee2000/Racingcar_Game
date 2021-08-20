@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class RandomUtils {
     private static final Random RANDOM = new Random();
@@ -17,7 +18,10 @@ public class RandomUtils {
     }
 
     public static List<Integer> createRaceNumbers(int countOfCars) {
-        List<Integer> raceNumbers = new ArrayList<>(countOfCars);
-        return raceNumbers.stream().map(number -> RandomUtils.createNumber()).collect(Collectors.toList());
+        List<Integer> raceNumber = new ArrayList<>(countOfCars);
+        for (int index = 0; index < countOfCars; index++) {
+            raceNumber.add(createNumber());
+        }
+        return raceNumber;
     }
 }

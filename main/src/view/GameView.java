@@ -1,5 +1,9 @@
 package view;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class GameView {
     private GameView() {
     }
@@ -10,5 +14,17 @@ public class GameView {
 
     public static void playGameCount() {
         System.out.println("시도할 회수는 몇회인가요?");
+    }
+
+    public static void nowGame(int[] racingCarsPostion) {
+        Arrays.stream(racingCarsPostion).forEach(racingCarPosition -> nowCarPosition(racingCarPosition));
+        System.out.println();
+    }
+
+    public static void nowCarPosition(int racingCarPosition) {
+        for (int index = 0; index < racingCarPosition; index++) {
+            System.out.print("-");
+        }
+        System.out.println();
     }
 }

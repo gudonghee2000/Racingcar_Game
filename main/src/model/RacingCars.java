@@ -1,8 +1,11 @@
 package model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class RacingCars {
     private List<Car> racingCars = new ArrayList<>();
@@ -33,5 +36,15 @@ public class RacingCars {
 
     public List<Car> getRacingCars() {
         return racingCars;
+    }
+
+    public void moveRacingCars(List<RaceNumber> raceNumbers) {
+        for (int index = 0; index < raceNumbers.size(); index++) {
+            racingCars.get(index).moveRacingCar(raceNumbers.get(index).getRaceNumber());
+        }
+    }
+
+    public int[] getCarsPosition() {
+        return racingCars.stream().mapToInt(racingCar -> racingCar.getPosition()).toArray();
     }
 }

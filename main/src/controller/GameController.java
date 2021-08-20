@@ -16,6 +16,10 @@ public class GameController {
         GameView.playGameCount();
         racingCarGame.inputCountOfRaces(InputController.inputRaceCount());
 
-        racingCarGame.inputRaceNumber(RandomUtils.createRaceNumbers(racingCarGame.getRacingCarsSize()));
+        while (gameOver != racingCarGame.getRaceCount()) {
+            gameOver += 1;
+            racingCarGame.moveRacingCar(RandomUtils.createRaceNumbers(racingCarGame.getRacingCarsSize()));
+            GameView.nowGame(racingCarGame.getRacingCarsPosition());
+        }
     }
 }
