@@ -16,12 +16,19 @@ public class GameView {
         System.out.println("시도할 회수는 몇회인가요?");
     }
 
-    public static void nowGame(int[] racingCarsPostion) {
-        Arrays.stream(racingCarsPostion).forEach(racingCarPosition -> nowCarPosition(racingCarPosition));
+    public static void nowGame(String[] racingCarsName, int[] racingCarsPostion) {
+        for (int index = 0; index < racingCarsName.length; index++) {
+            nowCarName(racingCarsName[index]);
+            nowCarPosition(racingCarsPostion[index]);
+        }
         System.out.println();
     }
 
-    public static void nowCarPosition(int racingCarPosition) {
+    private static void nowCarName(String racingCarName) {
+        System.out.printf("%s : ", racingCarName);
+    }
+
+    private static void nowCarPosition(int racingCarPosition) {
         for (int index = 0; index < racingCarPosition; index++) {
             System.out.print("-");
         }

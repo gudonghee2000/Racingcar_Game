@@ -44,7 +44,13 @@ public class RacingCars {
         }
     }
 
+    public String[] getCarsName() {
+        return racingCars.stream().map(racingCars -> racingCars.getName()).toArray(String[]::new);
+    }
+
     public int[] getCarsPosition() {
         return racingCars.stream().mapToInt(racingCar -> racingCar.getPosition()).toArray();
     }
 }
+fdljjs
+

@@ -31,6 +31,10 @@ public class RacingCarGame {
         racingCars.moveRacingCars(this.raceNumbers);
     }
 
+    public String[] getRacingCarsName() {
+        return racingCars.getCarsName();
+    }
+
     public int[] getRacingCarsPosition() {
         return racingCars.getCarsPosition();
     }

@@ -19,7 +19,7 @@ public class GameController {
         while (gameOver != racingCarGame.getRaceCount()) {
             gameOver += 1;
             racingCarGame.moveRacingCar(RandomUtils.createRaceNumbers(racingCarGame.getRacingCarsSize()));
-            GameView.nowGame(racingCarGame.getRacingCarsPosition());
+            GameView.nowGame(racingCarGame.getRacingCarsName(), racingCarGame.getRacingCarsPosition());
         }
     }
 }
