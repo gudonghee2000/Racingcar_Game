@@ -20,5 +20,6 @@ public class GameController {
             racingCarGame.moveRacingCar(RandomUtils.createRandomNumbers(racingCarGame.getRacingCarsCount()));
             GameView.showCurrentGame(racingCarGame.getRacingCarsName(), racingCarGame.getRacingCarsPosition());
         }
+        GameView.winnerOfGame(racingCarGame.getWinnerName());
     }
 }

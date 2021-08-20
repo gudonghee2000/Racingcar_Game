@@ -36,4 +36,9 @@ public class RacingCarGame {
     public int[] getRacingCarsPosition() {
         return racingCars.getCarsPosition();
     }
+
+    public List<String> getWinnerName() {
+        Winner winner = new Winner(racingCars.getCarsName(), racingCars.getCarsPosition());
+        return winner.getWinners();
+    }
 }

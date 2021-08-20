@@ -34,4 +34,9 @@ public class GameView {
         }
         System.out.println();
     }
+
+    public static void winnerOfGame(List<String> winners) {
+        System.out.print("최종 우승자 : ");
+        winners.stream().forEach(winner -> System.out.printf("%s, ", winner));
+    }
 }
