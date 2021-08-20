@@ -1,34 +1,32 @@
 package model;
 
-import utils.RandomUtils;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class RacingCarGame {
     private RacingCars racingCars;
     private CountOfRaces countOfRaces;
-    private List<RaceNumber> raceNumbers;
+    private List<RandomNumbers> randomNumbers;
 
     public RacingCarGame(String[] cars) {
         racingCars = new RacingCars(cars);
     }
 
-    public void inputCountOfRaces(int number) {
+    public void selectCountOfRaces(int number) {
         countOfRaces = new CountOfRaces(number);
     }
 
-    public int getRacingCarsSize() {
-        return racingCars.getRacingCars().size();
+    public int getRacingCarsCount() {
+        return racingCars.getRacingCarsCount();
     }
 
     public int getRaceCount() {
         return countOfRaces.getRaceCount();
     }
 
-    public void moveRacingCar(List<Integer> raceNumbers) {
-        this.raceNumbers = raceNumbers.stream().map(RaceNumber::new).collect(Collectors.toList());
-        racingCars.moveRacingCars(this.raceNumbers);
+    public void moveRacingCar(List<Integer> randomNumbers) {
+        this.randomNumbers = randomNumbers.stream().map(RandomNumbers::new).collect(Collectors.toList());
+        racingCars.moveRacingCars(this.randomNumbers);
     }
 
     public String[] getRacingCarsName() {

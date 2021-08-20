@@ -8,12 +8,12 @@ public class InputController {
     private InputController() {
     }
 
-    public static String[] inputCars() {
+    public static String[] inputRacingCars() {
         String[] Cars = scanner.nextLine().split(",");
         return Cars;
     }
 
-    public static int inputRaceCount() {
+    public static int inputCountofRaces() {
         return scanner.nextInt();
     }
 }

@@ -3,18 +3,16 @@ package model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class RacingCars {
     private List<Car> racingCars = new ArrayList<>();
 
     public RacingCars(String[] Cars) {
-        inputRacingCars(Cars);
+        makeRacingCars(Cars);
     }
 
-    private void inputRacingCars(String[] cars) {
+    private void makeRacingCars(String[] cars) {
         isValidationCars(cars);
         racingCars = Arrays.stream(cars).map(Car::new).collect(Collectors.toList());
     }
@@ -34,23 +32,23 @@ public class RacingCars {
         }
     }
 
-    public List<Car> getRacingCars() {
-        return racingCars;
+    public int getRacingCarsCount() {
+        return racingCars.size();
     }
 
-    public void moveRacingCars(List<RaceNumber> raceNumbers) {
-        for (int index = 0; index < raceNumbers.size(); index++) {
-            racingCars.get(index).moveRacingCar(raceNumbers.get(index).getRaceNumber());
+    public void moveRacingCars(List<RandomNumbers> randomNumbers) {
+        for (int index = 0; index < randomNumbers.size(); index++) {
+            racingCars.get(index).moveCar(randomNumbers.get(index).getRandomNumber());
         }
     }
 
     public String[] getCarsName() {
-        return racingCars.stream().map(racingCars -> racingCars.getName()).toArray(String[]::new);
+        return racingCars.stream().map(car -> car.getCarName()).toArray(String[]::new);
     }
 
     public int[] getCarsPosition() {
-        return racingCars.stream().mapToInt(racingCar -> racingCar.getPosition()).toArray();
+        return racingCars.stream().mapToInt(car -> car.getCarPosition()).toArray();
     }
 }
-fdljjs
+
 

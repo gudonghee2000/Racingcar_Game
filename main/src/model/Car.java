@@ -8,16 +8,16 @@ public class Car {
         this.name = name;
     }
 
-    public void moveRacingCar(int raceNumber) {
-        if (raceNumber > 4)
+    public void moveCar(int randomNumber) {
+        if (randomNumber > 4)
             position += 1;
     }
 
-    public String getName() {
+    public String getCarName() {
         return name;
     }
 
-    public int getPosition() {
+    public int getCarPosition() {
         return position;
     }
 }

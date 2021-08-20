@@ -12,23 +12,23 @@ public class GameView {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
     }
 
-    public static void playGameCount() {
+    public static void selectPlayGameCount() {
         System.out.println("시도할 회수는 몇회인가요?");
     }
 
-    public static void nowGame(String[] racingCarsName, int[] racingCarsPostion) {
+    public static void showCurrentGame(String[] racingCarsName, int[] racingCarsPostion) {
         for (int index = 0; index < racingCarsName.length; index++) {
-            nowCarName(racingCarsName[index]);
-            nowCarPosition(racingCarsPostion[index]);
+            showCarName(racingCarsName[index]);
+            showCarPosition(racingCarsPostion[index]);
         }
         System.out.println();
     }
 
-    private static void nowCarName(String racingCarName) {
+    private static void showCarName(String racingCarName) {
         System.out.printf("%s : ", racingCarName);
     }
 
-    private static void nowCarPosition(int racingCarPosition) {
+    private static void showCarPosition(int racingCarPosition) {
         for (int index = 0; index < racingCarPosition; index++) {
             System.out.print("-");
         }
