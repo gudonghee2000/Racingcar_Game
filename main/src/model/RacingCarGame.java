@@ -5,15 +5,15 @@ import java.util.stream.Collectors;
 
 public class RacingCarGame {
     private RacingCars racingCars;
-    private CountOfRaces countOfRaces;
+    private GamePlayCount gamePlayCount;
     private List<RandomNumbers> randomNumbers;
 
     public RacingCarGame(String[] cars) {
         racingCars = new RacingCars(cars);
     }
 
-    public void selectCountOfRaces(int number) {
-        countOfRaces = new CountOfRaces(number);
+    public void selectGamePlayCount(String number) {
+        gamePlayCount = new GamePlayCount(number);
     }
 
     public int getRacingCarsCount() {
@@ -21,7 +21,7 @@ public class RacingCarGame {
     }
 
     public int getRaceCount() {
-        return countOfRaces.getRaceCount();
+        return gamePlayCount.getRaceCount();
     }
 
     public void moveRacingCar(List<Integer> randomNumbers) {

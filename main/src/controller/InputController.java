@@ -13,7 +13,7 @@ public class InputController {
         return Cars;
     }
 
-    public static int inputCountofRaces() {
-        return scanner.nextInt();
+    public static String inputGamePlayCount() {
+        return scanner.nextLine();
     }
 }

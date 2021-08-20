@@ -12,7 +12,7 @@ public class GameController {
         GameView.startGame();
         RacingCarGame racingCarGame = new RacingCarGame(InputController.inputRacingCars());
         GameView.selectPlayGameCount();
-        racingCarGame.selectCountOfRaces(InputController.inputCountofRaces());
+        racingCarGame.selectGamePlayCount(InputController.inputGamePlayCount());
 
         int playGameCount = racingCarGame.getRaceCount();
         while (playGameCount > 0) {
