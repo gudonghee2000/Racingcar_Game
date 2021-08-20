@@ -14,11 +14,11 @@ public class GameController {
         GameView.selectPlayGameCount();
         racingCarGame.selectGamePlayCount(InputController.inputGamePlayCount());
 
-        int playGameCount = racingCarGame.getRaceCount();
-        while (playGameCount > 0) {
-            playGameCount -= 1;
+        int gamePlayCount = racingCarGame.getRaceCount();
+        while (gamePlayCount > 0) {
+            gamePlayCount -= 1;
             racingCarGame.moveRacingCar(RandomUtils.createRandomNumbers(racingCarGame.getRacingCarsCount()));
-            GameView.showCurrentGame(racingCarGame.getRacingCarsName(), racingCarGame.getRacingCarsPosition());
+            GameView.currentCarsPosition(racingCarGame.getRacingCarsName(), racingCarGame.getRacingCarsPosition());
         }
         GameView.winnerOfGame(racingCarGame.getWinnerName());
     }

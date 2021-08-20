@@ -16,7 +16,7 @@ public class GameView {
         System.out.println("시도할 회수는 몇회인가요?");
     }
 
-    public static void showCurrentGame(String[] racingCarsName, int[] racingCarsPostion) {
+    public static void currentCarsPosition(String[] racingCarsName, int[] racingCarsPostion) {
         for (int index = 0; index < racingCarsName.length; index++) {
             showCarName(racingCarsName[index]);
             showCarPosition(racingCarsPostion[index]);
