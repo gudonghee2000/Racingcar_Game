@@ -3,13 +3,14 @@ package model;
 public class Car {
     private final String name;
     private int position = 0;
+    private static final int MIN_NUMBER = 4;
 
     public Car(String name) {
         this.name = name;
     }
 
     public void moveCar(int randomNumber) {
-        if (randomNumber > 4)
+        if (randomNumber > MIN_NUMBER)
             position += 1;
     }
 

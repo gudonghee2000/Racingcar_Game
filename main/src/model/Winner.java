@@ -7,9 +7,9 @@ public class Winner {
     private List<String> winners = new ArrayList<>();
 
     protected Winner(String[] racingCarsName, int[] racingCarsPosition) {
-        int m = maxCarPosition(racingCarsPosition);
+        int maxPosition = maxCarPosition(racingCarsPosition);
         for (int index = 0; index < racingCarsPosition.length; index++) {
-            if (racingCarsPosition[index] == m) {
+            if (racingCarsPosition[index] == maxPosition) {
                 winners.add(racingCarsName[index]);
             }
         }

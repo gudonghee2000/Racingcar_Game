@@ -2,6 +2,7 @@ package model;
 
 public class GamePlayCount {
     private int raceCount;
+    private static final String NUMBER_PATTERN = "^[1-9]+$]";
 
     protected GamePlayCount(String number) {
         isValidation(number);
@@ -9,7 +10,7 @@ public class GamePlayCount {
     }
 
     private void isValidation(String number) {
-        if (!number.matches("^[1-9]+$]")) {
+        if (!number.matches(NUMBER_PATTERN)) {
             throw new IllegalArgumentException("[Error] 입력한 경기 회수가 올바른 숫자가 아닙니다.");
         }
     }
